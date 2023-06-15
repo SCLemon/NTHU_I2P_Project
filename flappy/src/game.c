@@ -467,7 +467,7 @@ int main()
     disp_init();
 
     must_init(al_init_image_addon(), "image");//初始化 Allegro 的圖像處理相關模組，確保可以載入圖像文件。
-    sprites_init();//初始化遊戲中的精靈圖像??。
+    sprites_init();//初始化遊戲中的精靈圖像。
 
     ALLEGRO_FONT *font = al_create_builtin_font();//創建 Allegro 的內建字型
     must_init(font, "font");//調用 must_init 函式，將字型的指標和描述性的字串 "font" 作為參數傳遞，確保字型的創建成功。
