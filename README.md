@@ -2,7 +2,7 @@
 主題：Flappy Bird <br>
 製作人： SCLemon、Kian、孟哲 <br>
 <hr>
-Game Proposal: <a href="https://github.com/SCLemon/NTHU_I2P_Project/blob/main/final_project_proposal.pdf">Project Proposal</a>
+Game Proposal: <a href="https://github.com/SCLemon/NTHU_I2P_Project/blob/main/Final%20Project%20Proposal.pdf">Project Proposal</a>
 <hr>
 主要作法：Bird在 y 軸座標移動而 x 軸固定，利用管子向左移動的方式降低實作的複雜度。<br>
 附加功能：管子長度的變更以及擺放位置還有撞到後的終結事件。<br>
@@ -37,7 +37,7 @@ and etc...
 2023.06.03 暫定主題 ( Flappy bird ) <br>
 2023.06.07 提議主題 ( Teris ) 並取得素材 <br>
 2023.06.07 最終抉擇 ( Flappy bird )<br>
-2023.06.07 開始討論 <br>
+2023.06.07 開始製作 <br>
 2023.06.07~2023.06.08 完成第一部分功能與註解 （ SCLemon ）<br>
 2023.06.10~2023.06.11 探討與思考 proposal 撰寫 <br>
 2023.06.11 完成第二部分與第三部分功能與註解 （ Kian / 孟哲 ）<br>
