@@ -2,6 +2,8 @@
 主題：Flappy Bird <br>
 製作人： SCLemon、Kian、孟哲 <br>
 <hr>
+Game Proposal: <a href="https://github.com/SCLemon/NTHU_I2P_Project/blob/main/final_project_proposal.pdf">Project Proposal</a>
+<hr>
 主要作法：Bird在 y 軸座標移動而 x 軸固定，利用管子向左移動的方式降低實作的複雜度。<br>
 附加功能：管子長度的變更以及擺放位置還有撞到後的終結事件。<br>
 素材來源：https://github.com/ianitow/flappy-bird-game/tree/main/images <br>
@@ -42,7 +44,7 @@ and etc...
 2023.06.14~2023.06.15 How to write a game proposal <br>
 2023.06.16 重新上傳 Github 倉庫 <br>
 2023.06.16 分配撰寫 proposal <br>
-2023.06.17 完成並上傳 proposal <br>
+2023.06.16 完成並上傳 proposal <br>
 2023.06.19 現場 Demo 小作品 <br>
 <hr>
 How to Use?<br>
