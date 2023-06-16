@@ -41,7 +41,8 @@ and etc...
 2023.06.11 完成第二部分與第三部分功能與註解 （ Kian / 孟哲 ）<br>
 2023.06.14~2023.06.15 How to write a game proposal <br>
 2023.06.16 重新上傳 Github 倉庫 <br>
-2023.06.16~2023.06.17 撰寫 proposal <br>
+2023.06.16 分配撰寫 proposal <br>
+2023.06.17 完成並上傳 proposal <br>
 2023.06.19 現場 Demo 小作品 <br>
 <hr>
 How to Use?<br>
