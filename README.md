@@ -6,7 +6,7 @@ Game Proposal: <a href="https://github.com/SCLemon/NTHU_I2P_Project/blob/main/Fi
 <hr>
 主要作法：Bird在 y 軸座標移動而 x 軸固定，利用管子向左移動的方式降低實作的複雜度。<br>
 附加功能：管子長度的變更以及擺放位置還有撞到後的終結事件。<br>
-素材來源：https://github.com/ianitow/flappy-bird-game/tree/main/images <br>
+素材來源：https://www.aigei.com/view/71187.html <br>
 參考資料：<br>
 1. Github: https://github.com/ianitow/flappy-bird-game <br>
 2. Youtube: https://www.youtube.com/watch?v=fDdwCTbZL5c <br>
