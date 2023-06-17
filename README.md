@@ -2,7 +2,7 @@
 主題：Flappy Bird <br>
 製作人： SCLemon、Kian、孟哲 <br>
 <hr>
-Introduction: <a href="https://github.com/SCLemon/NTHU_I2P_Project/blob/main/introduction.pdf"> Project Inroduction </a>
+Introduction: <a href="https://github.com/SCLemon/NTHU_I2P_Project/blob/main/introduction.pdf"> Project Inroduction </a><br>
 Game Proposal: <a href="https://github.com/SCLemon/NTHU_I2P_Project/blob/main/Final%20Project%20Proposal.pdf">Project Proposal</a>
 <hr>
 主要作法：Bird在 y 軸座標移動而 x 軸固定，利用管子向左移動的方式降低實作的複雜度。<br>
