@@ -174,7 +174,7 @@ void sprites_init()
     // 按鈕圖像資源（包含多個按鈕的圖片）
     sprites.buttons = al_load_bitmap("./assets/buttons.png");
     must_init(sprites.buttons, "buttons");
-    
+
     // 從圖像資源中提取子圖像，並將這些子圖像分配給相應的 ALLEGRO_BITMAP 指標成員。
     sprites.bt_menu = sprite_grab(sprites.buttons, 0, 0, 40, 14);
     sprites.bt_ok = sprite_grab(sprites.buttons, 0, 16, 40, 14);
@@ -250,7 +250,7 @@ void audio_play(ALLEGRO_SAMPLE *audio, ALLEGRO_PLAYMODE loop)
                 //0: played at original volume
                 //1: full right panning
                 //loop: determines whether the audio sample should loop or not. if we set it 0, the sample will play once and stop.
-                 
+
 
 void audio_init()
 {
@@ -286,9 +286,9 @@ void audio_denit()
 }
 
 // --- hud ---
-void score_draw(ALLEGRO_FONT *font, int isAlive) // to check the player is alive or dead 
+void score_draw(ALLEGRO_FONT *font, int isAlive) // to check the player is alive or dead
 {
-    sprintf(score_string, "%i", score); //%i : more flexible of %d 
+    sprintf(score_string, "%i", score); //%i : more flexible of %d
     if (isAlive)                        //sprintf is used to store the value of the score in to the score_string
     {
         al_draw_text(font, al_map_rgb(255, 255, 255), (BUFFER_W / 2) - 2, 10, 0, score_string);
@@ -313,12 +313,12 @@ void score_draw(ALLEGRO_FONT *font, int isAlive) // to check the player is alive
 
 void scoreboard_draw(ALLEGRO_FONT *font) //draw scoreboard
 {   //al_draw_bitmap draw the bitmap onto the display //draw the first one onto the display  //buffer represent the width
-    al_draw_bitmap(sprites.game_over, BUFFER_W / 9 + 8, BUFFER_W / 3 - 5, 0); 
+    al_draw_bitmap(sprites.game_over, BUFFER_W / 9 + 8, BUFFER_W / 3 - 5, 0);
     al_draw_bitmap(sprites.scoreboard, BUFFER_W / 9, BUFFER_H / 3, 0); //draw  score board
     sprintf(best_score_string, "%i", best_score);  //store the best_score into the best_score_String
     al_draw_text(font, al_map_rgb(251, 120, 88), BUFFER_W - 40, BUFFER_H - 133, 0, best_score_string);
     //draw text onto the display  //almaprgb for the color // buffer_w and buffer_h is x and y coordinates //0 : no special flags
-    //best_score_String will be drawn 
+    //best_score_String will be drawn
     al_draw_bitmap(sprites.bt_ok, 27, 150, 0); //draw bt_ok
     al_draw_bitmap(sprites.bt_menu, 77, 150, 0);  //draw bt_menu
     if (best_score_was_updated)
@@ -369,8 +369,8 @@ PLAYER player;
 void player_init(){
     player.x = 20; //the player initial's horizontal position
     player.y = 100; //the player initial's vertical position
-    player.gravity = 0; //the player doesnt have any initial vertical acceleration due to gravity 
-    player.isAlive = 1; //indicates the player initially alive or active 
+    player.gravity = 0; //the player doesnt have any initial vertical acceleration due to gravity
+    player.isAlive = 1; //indicates the player initially alive or active
 }
 
 void player_draw(){
@@ -405,7 +405,7 @@ int isPlayerColliding(float player_x, float player_y, float pipe_x, float pipe_y
 }
 
 void pipe_init(){
-    srand(time(NULL)); //初始化隨機數生成器。它將 time(NULL) 作為種子，以確保每次運行時生成的隨機數序列都是不同的。
+    srand(time(NULL)); //初始化隨機數生成器。它將 time(NULL) 作為種子，以確保每次運行時生成的隨機數序列不同。
     pipes[0].x = BUFFER_W;//水管的初始 x 座標在畫布的寬度邊界上
     pipes[0].y = (rand() % 100) - 100;//y座標將 pipes[0].y 設定為 (rand() % 100) - 100，這將生成一個介於 -100 和 -1 之間的隨機數。
 
@@ -452,11 +452,11 @@ int main()
     must_init(al_init(), "allegro");
     must_init(al_install_keyboard(), "keyboard");
     must_init(al_install_mouse(), "mouse");
-    //使用 al_create_timer 函式創建了一個計時器，速率為每秒觸發 1/ 60次，它將計時器的指標賦值給 timer 變數。接下來，調用 must_init 函式，將 timer 和描述性的字串 "timer" 作為參數傳遞。
+    //使用 al_create_timer 函式創建了一個計時器，速率為每秒觸發 1/ 60次
     ALLEGRO_TIMER *timer = al_create_timer(1.0 / 60.0);
     must_init(timer, "timer");
 
-    //使用 al_create_event_queue 函式創建了一個事件佇列。然後，它將事件佇列的指標賦值給 queue 變數。接下來，調用 must_init 函式，將 queue 和描述性的字串 "queue" 作為參數傳遞。
+    //使用 al_create_event_queue 函式創建了一個event queue
     ALLEGRO_EVENT_QUEUE *queue = al_create_event_queue();
     must_init(queue, "queue");
 
@@ -467,14 +467,14 @@ int main()
     disp_init();
 
     must_init(al_init_image_addon(), "image");//初始化 Allegro 的圖像處理相關模組，確保可以載入圖像文件。
-    sprites_init();//初始化遊戲中的精靈圖像。
+    sprites_init();//初始化遊戲中的圖像。
 
     ALLEGRO_FONT *font = al_create_builtin_font();//創建 Allegro 的內建字型
-    must_init(font, "font");//調用 must_init 函式，將字型的指標和描述性的字串 "font" 作為參數傳遞，確保字型的創建成功。
+    must_init(font, "font");//調用 must_init 函式，確保字型的創建成功。
 
-    must_init(al_init_primitives_addon(), "primitives");//初始化 Allegro 的基本圖元繪製相關模組，確保可以繪製基本的圖元形狀，如線段、矩形、圓等。
+    must_init(al_init_primitives_addon(), "primitives");//初始化 Allegro 的基本圖元繪製相關模組。
 
-    al_register_event_source(queue, al_get_keyboard_event_source());//將鍵盤、顯示事件、計時器和滑鼠的事件來源導入到事件佇列中，以便在遊戲迴圈中接收和處理這些事件。
+    al_register_event_source(queue, al_get_keyboard_event_source());//將鍵盤、顯示事件、計時器和滑鼠的事件來源導入到event queue中，以便在遊戲迴圈中接收和處理這些事件
     al_register_event_source(queue, al_get_display_event_source(disp));
     al_register_event_source(queue, al_get_timer_event_source(timer));
     al_register_event_source(queue, al_get_mouse_event_source());
@@ -491,14 +491,14 @@ int main()
     al_start_timer(timer);
     while (1)
     {
-        al_wait_for_event(queue, &event);//使用 al_wait_for_event 函式來等待事件的發生。函式會將事件從queue取出，並將其儲存在 event 變數中。
+        al_wait_for_event(queue, &event);//使用 al_wait_for_event 函式來等待事件的發生
 
         switch (event.type)
         {
         case ALLEGRO_EVENT_TIMER:
             if (isOnMenu)//在選單畫面 (isOnMenu)，檢查是否按下 A 鍵 (ALLEGRO_KEY_A)。
             {
-                if (key[ALLEGRO_KEY_A])//如果是，將 isOnMenu 設為 0，並將 isOnHowToPlay 設為 1。
+                if (key[ALLEGRO_KEY_A])
                 {
                     isOnMenu = 0;
                     isOnHowToPlay = 1;
@@ -506,7 +506,7 @@ int main()
             }
             else//否則，如果目前在遊戲說明畫面 (isOnHowToPlay)，檢查是否按下空白鍵 (ALLEGRO_KEY_SPACE)。
             {
-                if (isOnHowToPlay)//如果是，將 isOnHowToPlay 設為 0。
+                if (isOnHowToPlay)
                 {
                     if (key[ALLEGRO_KEY_SPACE])
                     {
@@ -543,13 +543,13 @@ int main()
                 }
             }
 
-            for (int i = 0; i < ALLEGRO_KEY_MAX; i++)//將按鍵狀態 (key) 中的 KEY_SEEN 清除，設定 redraw 為 true，表示需要重新繪製畫面。
+            for (int i = 0; i < ALLEGRO_KEY_MAX; i++)//將按鍵狀態中的 KEY_SEEN 清除，設定 redraw 為 true，表示需要重新繪製畫面。
                 key[i] &= KEY_SEEN;
 
             redraw = true;
             break;
 
-        case ALLEGRO_EVENT_MOUSE_BUTTON_DOWN:  // 當滑鼠按鈕按下事件發生時的處理邏輯
+        case ALLEGRO_EVENT_MOUSE_BUTTON_DOWN:  // 當滑鼠按鈕按下事件發生時的處理方式
             if (isOnMenu) //檢查滑鼠按下的位置是否在選單畫面的特定區域內。
             {
                 if (event.mouse.x >= DISP_W / 3.2 && event.mouse.x <= (DISP_W / 3.2) + 52 * 3)//滑鼠按下的是選單中的特定按鈕。
@@ -589,14 +589,14 @@ int main()
             }
             break;
 
-        case ALLEGRO_EVENT_KEY_DOWN:// 當鍵盤按下事件發生時的處理邏輯
+        case ALLEGRO_EVENT_KEY_DOWN:// 當鍵盤按下事件發生時的處理方式
             key[event.keyboard.keycode] = KEY_SEEN | KEY_RELEASED;
             break;
-        case ALLEGRO_EVENT_KEY_UP:// 當鍵盤放開事件發生時的處理邏輯
+        case ALLEGRO_EVENT_KEY_UP:// 當鍵盤放開事件發生時的處理方式
             key[event.keyboard.keycode] &= KEY_RELEASED;
             break;
 
-        case ALLEGRO_EVENT_DISPLAY_CLOSE:// 當顯示視窗關閉事件發生時的處理邏輯
+        case ALLEGRO_EVENT_DISPLAY_CLOSE:// 當顯示視窗關閉事件發生時的處理方式
             done = true;
             break;
         }
@@ -604,12 +604,12 @@ int main()
         if (done)
             break;
 
-        if (redraw && al_is_event_queue_empty(queue))//檢查 redraw 變數和事件佇列是否為空。只有在 redraw 為真且事件佇列為空時，才需要重新繪製畫面。
+        if (redraw && al_is_event_queue_empty(queue))//檢查 redraw 變數和event queue是否為空。只有在 redraw 為ture且event queue為空時，才需要重新繪製畫面。
         {
             disp_pre_draw();// 進行繪製前的準備工作。
             al_clear_to_color(al_map_rgb(0, 0, 0));// 函式將畫布清空為黑色背景。
 
-            al_draw_bitmap(sprites.background, 0, 0, 0);//繪製背景圖像 (sprites.background)。
+            al_draw_bitmap(sprites.background, 0, 0, 0);//繪製背景圖像。
 
             if (isOnMenu)
             {

@@ -46,6 +46,7 @@ and etc...
 2023.06.16 重新上傳 Github 倉庫 <br>
 2023.06.16 分配撰寫 proposal <br>
 2023.06.16 完成並上傳 proposal <br>
+2023.06.18 最終註解修正與上傳 <br>
 2023.06.19 現場 Demo 小作品 <br>
 <hr>
 How to Use?<br>
